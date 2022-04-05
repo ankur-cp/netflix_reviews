@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/apps/netflix_reviews/static/css/main.073c9b0a.css",
-    "main.js": "/apps/netflix_reviews/static/js/main.8786cdec.js",
-    "static/js/787.88bb897f.chunk.js": "/apps/netflix_reviews/static/js/787.88bb897f.chunk.js",
-    "index.html": "/apps/netflix_reviews/index.html",
-    "main.073c9b0a.css.map": "/apps/netflix_reviews/static/css/main.073c9b0a.css.map",
-    "main.8786cdec.js.map": "/apps/netflix_reviews/static/js/main.8786cdec.js.map",
-    "787.88bb897f.chunk.js.map": "/apps/netflix_reviews/static/js/787.88bb897f.chunk.js.map"
+    "main.css": "/netflix_reviews/static/css/main.073c9b0a.css",
+    "main.js": "/netflix_reviews/static/js/main.cd6a1dd9.js",
+    "static/js/787.88bb897f.chunk.js": "/netflix_reviews/static/js/787.88bb897f.chunk.js",
+    "index.html": "/netflix_reviews/index.html",
+    "main.073c9b0a.css.map": "/netflix_reviews/static/css/main.073c9b0a.css.map",
+    "main.cd6a1dd9.js.map": "/netflix_reviews/static/js/main.cd6a1dd9.js.map",
+    "787.88bb897f.chunk.js.map": "/netflix_reviews/static/js/787.88bb897f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.8786cdec.js"
+    "static/js/main.cd6a1dd9.js"
   ]
 }

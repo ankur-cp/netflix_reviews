@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import NetflixAPI from "../api/NetflixAPI"
 
 function ProductDetailPage(props) {
   // states
   const [product, setProduct] = useState(null)
 
-  // params
+  // router values
   const params = useParams()
 
   // effects
@@ -24,6 +24,10 @@ function ProductDetailPage(props) {
 
   // render
   const renderReviews = () => {
+    if (product.reviews.length === 0) {
+      return "No Reviews Found."
+    }
+
     return product.reviews.map((review, index) => {
       return (
         <div key={ index } 
@@ -44,6 +48,7 @@ function ProductDetailPage(props) {
       <h2>{ product.title }</h2>
       <h3>{ product.category.type }</h3>
       <hr />
+      <Link to={`/product/${product.id}/review/add`}>Add a review</Link>
       <h4>Reviews:</h4>
       { renderReviews() }
     </div>

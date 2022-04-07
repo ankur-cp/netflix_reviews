@@ -1,5 +1,4 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Routes, Route } from "react-router-dom"
 
 // pages
@@ -27,7 +26,7 @@ function App() {
               <Route path="/category/:categoryId" element={ <ProductPage /> } />
               <Route path="/genre/:genreId" element={ <ProductPage /> } />
               <Route path="/product/:productId" element={ <ProductDetailPage /> } />
-              <Route path="/product/:productId/reviews/add" element={ <AddReviewPage /> } />
+              <Route path="/product/:productId/review/add" element={ <AddReviewPage /> } />
               <Route path="/product/add" element={ <AddProductPage /> } />
               <Route path="/review/add" element={ <AddReviewPage /> } />
             </Routes>

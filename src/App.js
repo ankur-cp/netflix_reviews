@@ -1,42 +1,39 @@
 import './App.css';
-import { useEffect, useState } from "react"
-import axios from "axios"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter, Routes, Route } from "react-router-dom"
+
+// pages
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import AddProductPage from './pages/AddProductPage';
+import AddReviewPage from './pages/AddReviewPage';
+
+// components
+import Header from './components/Header';
+import ProductMenu from './components/ProductMenu';
 
 function App() {
-  // states
-  const [products, setProducts] = useState([])
-
-  // effects
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        let response = await axios.get("http://localhost:8000/netflix_api/products/")
-        console.log(response)
-        let data = response.data
-        console.log(data)
-        setProducts(data)
-      }
-      catch (e) {
-        console.log(e)
-      }
-    }
-
-    getProducts();
-  }, [])
-
-  // render
-  const renderProducts = () => {
-    return products.map((item, index) => {
-      return <li key={ index }>{ item.title }</li>
-    })
-  }
-
   return (
     <div className="App">
-      <h2>Products</h2>
-      <ul>
-        { renderProducts() }
-      </ul>
+      <HashRouter>
+        <Header title="NETFLIX REVIEWS"/>
+        <div id="div-content">
+          <ProductMenu />
+          <main id="main-content">
+            <Routes>
+              <Route path="/" element={ <HomePage /> } />
+              <Route path="/all" element={ <ProductPage /> } />
+              <Route path="/category/:categoryId" element={ <ProductPage /> } />
+              <Route path="/genre/:genreId" element={ <ProductPage /> } />
+              <Route path="/product/:productId" element={ <ProductDetailPage /> } />
+              <Route path="/product/:productId/reviews/add" element={ <AddReviewPage /> } />
+              <Route path="/product/add" element={ <AddProductPage /> } />
+              <Route path="/review/add" element={ <AddReviewPage /> } />
+            </Routes>
+          </main>
+        </div>
+      </HashRouter>
     </div>
   );
 }

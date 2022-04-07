@@ -1,38 +1,145 @@
 .App {
-  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2, h3, p {
+  margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: #AAAAAA;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pad10 {
+  padding: 20px;
+}
+
+#header {
+  height: 120px;
   display: flex;
-  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  background-color: #AA0000;
+}
+
+#header-title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+#header-menu {
+  height: 24px;
+  width: calc(100% - 4px);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color:#880000;
+  padding: 2px;
+}
+
+#header-menu button {
+  border: 1px #DD0000 solid;
   color: white;
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+#header-menu button:hover {
+  border: 1px #FFFFAA solid;
+  color: #FFFFAA;
+  background-color: #111111;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#div-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#nav {
+  background-color: #AA0000;
+  width: 150px;
+  border-right: #AA0000 2px solid;
+}
+
+#nav a, #nav a:visited, #nav a:hover, #nav a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-header {
+  background-color: #CCAAAA;
+  border-bottom: #888888 1px solid;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+}
+
+.nav-item {
+  background-color: #CCCCCC;
+  border-bottom: #888888 1px solid;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  color: #AA0000;
+  background-color: #EEEEEE;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#main-content {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  width: 100%;
+  border-left: #CCCCCC 2px solid;
+}
+
+
+.review {
+  padding: 4px;
+}
+
+.review p {
+  margin: 2px;
+  font-size: small;
+  font-weight: 600;
+}
+
+.review-odd {
+  background-color: #F8F8F8;
+}
+
+.review-even {
+  background-color: #EEEEEE;
+}
+
+.review-rating-1 {
+  color: #AA0000;
+}
+
+.review-rating-2 {
+  color: #994400;
+}
+
+.review-rating-3 {
+  color: #888800;
+}
+
+.review-rating-4 {
+  color: #668800;
+}
+
+.review-rating-5 {
+  color: #009900;
 }
